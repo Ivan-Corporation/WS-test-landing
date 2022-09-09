@@ -6,7 +6,7 @@
 <br/>
 
 <h3>Simple version - https://ws-test-landing.vercel.app/</h3>
-<h3>Animated version -</h3>
+<h3>Animated version - https://will-skill-animated.netlify.app/</h3>
 
 <hr/>
 <h2 align='center'> Screenshots:</h2>
