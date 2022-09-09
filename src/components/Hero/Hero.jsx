@@ -2,7 +2,7 @@ import React from 'react';
 
 import { Container } from '../../GlobalStyles';
 import { HeroBackground, HeroSection, HeroText, MainTitle, HeroSecondaryText, MainSecondaryTitle } from './HeroStyles';
-import background from '../../assets/first_component_bg.png'
+import background from '../../assets/first_component_bg.webp'
 
 
 
