@@ -21,6 +21,7 @@ import { IconContext } from 'react-icons';
 import logo from '../../assets/logo.svg'
 import cart from '../../assets/cart.svg'
 
+import { motion } from 'framer-motion'
 
 
 
@@ -42,33 +43,43 @@ function Navbar() {
 
 	return (
 		<IconContext.Provider value={{ color: '#fff' }}>
-			<HeaderMain>
-				<HeaderContainer>
-					<HeaderLogo href="/">
-						<HeaderIcon src={logo} alt="logo" />
-					</HeaderLogo>
-					<MobileIcon onClick={handleClick}>
-						{show ? <FaTimes /> : <CgMenuRight />}
-					</MobileIcon>
-					<HeaderMenu show={show}>
-						{HeaderData.map((el, index) => (
-							<HeaderItem key={index}>
-								<HeaderLinks href={el.to} onClick={() => closeMobileMenu()}>
-									{el.text}
-								</HeaderLinks>
-							</HeaderItem>
-						))}
-						<HeaderLinks><HeaderPhone show={show}>8 8 (800) 600-09-90</HeaderPhone></HeaderLinks>
+			<motion.div
+				initial={{ opacity: 0, y: -180 }}
+				animate={{ opacity: 1, y: 0 }}
+				transition={{
+					ease: "easeInOut",
+					duration: 1,
+					delay: 0,
+				}}
+			>
+				<HeaderMain>
+					<HeaderContainer>
+						<HeaderLogo href="/">
+							<HeaderIcon src={logo} alt="logo" />
+						</HeaderLogo>
+						<MobileIcon onClick={handleClick}>
+							{show ? <FaTimes /> : <CgMenuRight />}
+						</MobileIcon>
+						<HeaderMenu show={show}>
+							{HeaderData.map((el, index) => (
+								<HeaderItem key={index}>
+									<HeaderLinks href={el.to} onClick={() => closeMobileMenu()}>
+										{el.text}
+									</HeaderLinks>
+								</HeaderItem>
+							))}
+							<HeaderLinks><HeaderPhone show={show}>8 8 (800) 600-09-90</HeaderPhone></HeaderLinks>
 
 
-					</HeaderMenu>
-					<HeaderCart href="/" show={show}>
-						<HeaderIcon src={cart} alt="logo" />
-						<HeaderStoreNumber>{cartNumber}</HeaderStoreNumber>
-					</HeaderCart>
+						</HeaderMenu>
+						<HeaderCart href="/" show={show}>
+							<HeaderIcon src={cart} alt="logo" />
+							<HeaderStoreNumber>{cartNumber}</HeaderStoreNumber>
+						</HeaderCart>
 
-				</HeaderContainer>
-			</HeaderMain>
+					</HeaderContainer>
+				</HeaderMain>
+			</motion.div>
 		</IconContext.Provider>
 	)
 }

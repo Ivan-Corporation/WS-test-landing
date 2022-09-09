@@ -11,6 +11,8 @@ import {
 // pages
 import Home from './pages/Home';
 
+
+
 const theme = {
 	colors: COLORS
 }
@@ -21,6 +23,7 @@ function App() {
 			<ThemeProvider theme={theme}>
 				<GlobalStyle />
 				<BrowserRouter>
+
 					<Header />
 
 					<Routes>
