@@ -124,7 +124,7 @@ export const HeaderMenu = styled.ul`
 export const HeaderPhone = styled.div`
 	cursor: copy;
 	@media screen and (max-width: 960px) {
-			visibility: ${({ show }) => (show ? 'visible' : 'hidden')};
+			display: ${({ show }) => (!show ? '' : 'none')};
 		}
 `;
 

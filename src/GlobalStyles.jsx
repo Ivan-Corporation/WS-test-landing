@@ -7,6 +7,7 @@ const GlobalStyle = createGlobalStyle`
   	padding: 0;
   	font-family: 'Rubik', sans-serif;
 	font-weight: 400;
+
   }
 `;
 

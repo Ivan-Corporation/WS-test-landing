@@ -25,6 +25,12 @@ export const ProductMaskLayout = styled.section`
 		
 		transform: scale(0.5);
 	}
+	
+	@media screen and (max-width: 380px) {
+		
+		transform: scale(0.35);
+	}
+
 `;
 export const ProductMaskNootris = styled.img`
 	height: 635.29px;
