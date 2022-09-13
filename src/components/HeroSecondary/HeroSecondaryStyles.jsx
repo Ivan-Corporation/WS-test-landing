@@ -82,7 +82,7 @@ export const HeroAdvantagesItemImage = styled.img`
 	}
 	@media screen and (max-width:660px) {
 		margin-bottom: 0rem;
-		transform: scale(0.65);	
+		transform: scale(0.6);	
 	}
 `;
 
