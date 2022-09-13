@@ -23,7 +23,7 @@ export const ProductMaskLayout = styled.section`
 	}
 	@media screen and (max-width: 660px) {
 		
-		transform: scale(0.5);
+		transform: scale(0.4);
 	}
 	
 	@media screen and (max-width: 380px) {
